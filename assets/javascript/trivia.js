@@ -4,18 +4,14 @@ $(document).ready(function(){
 
    $('.tooltipped').tooltip({delay: 50});
 
-   var questions = {
-     "question one" : {
+   var questions = [
+     {
         "question" : "Why did the chicken?",
-        "choices" : {
-          "a": "To get to the otherside",
-          "b": "Get some lemonade",
-          "c": "Go to the store"
-        },
+        "choices" : [ "To get to the otherside", "Get some lemonade", "Go to the store"],
         "answer": this.choices.a
      },
 
-   }
+   ]
 
 
 
