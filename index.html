@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Trivia</title>
+    <!-- Compiled and minified CSS -->
+    <!-- GOOGLE'S MATERIALIZE -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- START NAV -->
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+                    <!-- <a href="#" class="brand-logo center">Trivia</a> -->
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li>
+                            <a class="waves-effect waves-red btn-large btn-flat tooltipped center-align" href="#" data-position="left" data-delay="50" data-tooltip="Click For Github Repo."><i class="fa fa-github-alt fa-4x" aria-hidden="true" id="icons"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <!-- END NAV -->
+    <section id="introSection">
+        <div class="container">
+            <div class="row">
+                <div class="col s12" id="gameHeader">
+                    <h1 class="altText center-align">Trivia Game</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="row">
+                    <div class="col s6 offset-s3">
+                        <div class="card-panel" id="introCard">
+                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas consequat velit sed ultrices blandit. Etiam imperdiet ultricies urna eget ultricies. Fusce in nibh quis velit tincidunt pretium. Morbi maximus odio id molestie auctor. Quisque iaculis quis odio et fringilla. Morbi neque sem, tristique ac facilisis vitae, pellentesque ac elit. Curabitur leo sapien, bibendum eget risus sed, dictum fermentum mauris. Morbi congue lorem dapibus libero malesuada, ac egestas nisl porta.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col s3 offset-s3 center-align">
+              <a class="waves-effect waves-red btn-large btn-flat tooltipped" data-position="left" data-delay="50" data-tooltip="Click To Start.">Start</a>
+            </div>
+            <div class="col s3 center-align">
+            <a class="modal-trigger waves-effect waves-red btn-large btn-flat tooltipped" data-position="right" data-delay="50" data-tooltip="Click For Instructions." href="#instructionModal" id="instructionButton">Instructions</a>
+          </div>
+            </div>
+        </div>
+    </section>
+    <!-- QUESTIONS -->
+    <section id="questionSpace">
+      <div>
+      </div>
+    </section>
+    <!-- END QUESTIONS -->
+    <!-- Modal Structure -->
+     <div id="instructionModal" class="modal modal-fixed-footer">
+       <div class="modal-content">
+         <h4>Instructions</h4>
+         <p>Morbi accumsan felis vestibulum euismod tincidunt. Cras non felis a magna mollis euismod. Nulla porta odio non ultricies scelerisque. Nam at libero viverra, venenatis nibh et, blandit risus. Curabitur non gravida sapien. Morbi nec elit dapibus, placerat augue ut, facilisis ligula. Donec quis leo vitae ex egestas dapibus. Morbi accumsan, magna viverra pharetra tincidunt, ex enim sagittis ex, a dignissim risus ex quis enim. Donec vitae lacinia est. Phasellus sed vehicula est. Phasellus sollicitudin mollis blandit. Praesent ut libero tincidunt, tempor augue sed, consequat elit. Morbi tempor justo diam, quis tempus risus condimentum eget.</p>
+       </div>
+       <div class="modal-footer" id="instructionModalFooter">
+         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat white-text ">I Get It Already</a>
+       </div>
+     </div>
+
+
+
+    <!-- JQUERY CDN -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <!-- MATERIALIZE JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <!-- FONT AWESOME -->
+    <script src="https://use.fontawesome.com/dce08cf54a.js"></script>
+    <!-- TRIVIA JS -->
+    <script src="assets/javascript/trivia.js"></script>
+</body>
+
+</html>

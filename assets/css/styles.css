@@ -1,0 +1,43 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+nav {
+  background-color: #757575;
+  height: 80px;
+  line-height: 78px;
+}
+
+#introSection {
+  height: 1200px;
+  width: 100%;
+  background-color: #414141;
+}
+
+#instructionModal {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #eeeeee;
+}
+
+#introCard {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #eee;
+}
+
+#instructionModalFooter {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #eeeeee;
+}
+
+.btn-large {
+  border-radius: 100px;
+  color: #fff;
+  background-color: #056571;
+}
+
+.altText {
+  color: #fff;
+}
+
+#icons {
+  line-height: inherit;
+}
