@@ -6,10 +6,16 @@ $(document).ready(function(){
 
    var questions = [
      {
-        "question" : "Why did the chicken?",
+        "question" : "How big is the su?",
         "choices" : [ "To get to the otherside", "Get some lemonade", "Go to the store"],
-        "answer": this.choices.a
+        "answer": this.choices[0]
      },
+     {
+        "question" : "How many rings does Saturn have?",
+        "choices" : [ "To get to the otherside", "Get some lemonade", "Go to the store"],
+        "answer": this.choices[0]
+     },
+     
 
    ]
 
