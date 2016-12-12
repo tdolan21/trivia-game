@@ -1,5 +1,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
+  padding-bottom: 200px;
 }
 nav {
   background-color: #757575;
@@ -8,7 +9,7 @@ nav {
 }
 
 #introSection {
-  height: 1200px;
+  height: 600px;
   width: 100%;
   background-color: #414141;
 }
@@ -40,4 +41,8 @@ nav {
 
 #icons {
   line-height: inherit;
+}
+
+#question {
+  background-color: #fff;
 }
