@@ -1,21 +1,18 @@
 body {
   font-family: 'Space Mono', monospace;
-  padding-bottom: 200px;
+  /*padding-bottom: 70px;*/
   font-weight: 400;
 }
-nav {
-  background-color: #414141;
-  height: 80px;
-  line-height: 78px;
-}
+
+/*****************
+Parallax and Page Styling
+******************/
 
 .parallax-container {
       height: 1010px;
-    }
+}
 
-
-
-#test {
+#header {
   color: #fff;
   font-family: 'Monoton', cursive;
   font-size: 140px;
@@ -30,7 +27,12 @@ nav {
   color: #fff;
   font-size: 30px;
   margin: 50px 0;
+  margin-top: 200px;
   background-color: transparent;
+}
+
+#introSection {
+  margin-top: 60px;
 }
 
 #instructionModal {
@@ -38,12 +40,17 @@ nav {
   color: #eeeeee;
 }
 
-
 #instructionModalFooter {
   background-color: rgba(0, 0, 0, 0.9);
   color: #eeeeee;
 }
+/******************
+******************/
 
+
+/**********************
+    BUTTON STYLING
+***********************/
 .btn-large {
   border-radius: 6px;
   border: #fff 4px solid;
@@ -57,7 +64,41 @@ nav {
   border: #f1c40f 4px solid;
 }
 
+/********************
+  QUESTIONS STYLES
+*********************/
 
-#icons {
-  line-height: inherit;
+#questionSpace {
+  color: #fff;
+  margin-top: 200px;
+  /*border: #fff 5px solid;
+  border-radius: 6px;*/
+  padding: 17px;
+  width: 1000px;
+  height: 500px;
+}
+
+#question {
+  font-size: 50px;
+}
+
+/********************
+*********************/
+
+
+#timer {
+  color: #e74c3c;
+  font-size: 47px;
+}
+
+/********************
+  ANSWERS STYLES
+*********************/
+#choices {
+  font-size: 23px;
+}
+
+.pickAnswser {
+  border: solid 5px #fff;
+  display: block;
 }
