@@ -1,9 +1,9 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Share Tech Mono', monospace;
   padding-bottom: 200px;
 }
 nav {
-  background-color: #757575;
+  background-color: #414141;
   height: 80px;
   line-height: 78px;
 }
@@ -11,7 +11,16 @@ nav {
 #introSection {
   height: 600px;
   width: 100%;
-  background-color: #414141;
+}
+
+#test {
+  color: #fff;
+  font-size: 140px;
+}
+#parall {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 500px;
+    width: 100%;
 }
 
 #instructionModal {
@@ -19,10 +28,6 @@ nav {
   color: #eeeeee;
 }
 
-#introCard {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: #eee;
-}
 
 #instructionModalFooter {
   background-color: rgba(0, 0, 0, 0.9);
@@ -35,14 +40,7 @@ nav {
   background-color: #056571;
 }
 
-.altText {
-  color: #fff;
-}
 
 #icons {
   line-height: inherit;
-}
-
-#question {
-  background-color: #fff;
 }
