@@ -7,9 +7,10 @@ $(document).ready(function(){
    $('.parallax').parallax();
    $('.tooltipped').tooltip({delay: 50});
    $("#introSection").fadeIn(1000*5, function(){
-
+        // fadeIn function
    });
 
+   var congratsMessages = ['Great going cadet'];
 
    $("#startButton").on("click", function() {
      $("#buttonRow").hide();
