@@ -1,6 +1,7 @@
 body {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: 'Space Mono', monospace;
   padding-bottom: 200px;
+  font-weight: 400;
 }
 nav {
   background-color: #414141;
@@ -8,19 +9,27 @@ nav {
   line-height: 78px;
 }
 
-#introSection {
-  height: 600px;
-  width: 100%;
-}
+.parallax-container {
+      height: 1010px;
+    }
+
+
 
 #test {
   color: #fff;
+  font-family: 'Monoton', cursive;
   font-size: 140px;
 }
 #parall {
     background-color: rgba(0, 0, 0, 0.5);
-    height: 500px;
+    height: 1010px;
     width: 100%;
+}
+
+#introCard {
+  color: #fff;
+  font-size: 30px;
+  background-color: transparent;
 }
 
 #instructionModal {
@@ -35,7 +44,7 @@ nav {
 }
 
 .btn-large {
-  border-radius: 100px;
+  border-radius: 6px;
   color: #fff;
   background-color: #056571;
 }

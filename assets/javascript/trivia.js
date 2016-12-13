@@ -2,9 +2,18 @@
 // for cloud9 IDE purposes
 $(document).ready(function(){
    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+   $("#introSection").hide()
    $('#instructionModal').modal();
    $('.parallax').parallax();
    $('.tooltipped').tooltip({delay: 50});
+   $("#introSection").fadeIn(1000*5, function(){
+
+   });
+
+
+   $("#startButton").on("click", function() {
+     $("#buttonRow").hide();
+   })
 
 var questions = [
   {
