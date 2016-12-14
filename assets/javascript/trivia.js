@@ -31,7 +31,7 @@ function randomNum(x) {
   return roll;
 }
 
-
+//while (questions.length > userProgress)
 
 function randomCongrats(){
   var messageRoll = randomNum(congratsMessages.length);
@@ -40,7 +40,7 @@ function randomCongrats(){
 }
 
 function countDown() {
-  var i =3;
+  var i =30;
   var myInterval = setInterval(function() {
     $('#timerSeconds').html(i);
     if(i === 0) {
@@ -80,10 +80,16 @@ function postQuestion(n){
     $('#choices').append("<div class='pickAnswer'>" + questions[0].c[i]+"</div>");
   }
 
+  // need to put this after pickAnswer is put into the DOM
+  $(".pickAnswer").on("click", function() {
+    currentQuestionIndex++;
+    console.log(currentQuestionIndex)
+  })
 }
 
 function startTrivia() {
   postQuestion(currentQuestionIndex);
+
 }
 
 function checkUserAnswer() {
@@ -95,7 +101,10 @@ $("#startButton").on("click", function() {
   $("#introCard").hide();
   $("#timer").append("<span id='timerMinutes'>00</span>:<span id='timerSeconds'>00</span>");
   $("#questionSpace").show();
+
   startTrivia();
+
+
 })
 
 function nextQuestion() {
@@ -106,10 +115,6 @@ function nextQuestion() {
 //
 // }
 
-$(".pickAnswer").on("click", function() {
-  var userAnswer =
-  currentQuestionIndex++
-  console.log(currentQuestionIndex);
-})
+
 
  });
