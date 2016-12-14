@@ -5,6 +5,8 @@
 
 // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_data_attributes
 
+// http://stackoverflow.com/questions/5309926/how-to-get-the-data-id-attribute
+
 $(document).ready(function(){
    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
    $("#introSection").hide()
@@ -18,7 +20,8 @@ $(document).ready(function(){
    var correctCounter = 0,
    incorrectCounter = 0,
    unansweredCounter = 0,
-   currentQuestionIndex = 0;
+   currentQuestionIndex = 0,
+   userProgress= 0;
 
 
 var congratsMessages = ['Great going cadet', 'On the money astrophysicist'];
@@ -28,6 +31,8 @@ function randomNum(x) {
   return roll;
 }
 
+
+
 function randomCongrats(){
   var messageRoll = randomNum(congratsMessages.length);
   // return congratsMessages[messageRoll];
@@ -35,7 +40,7 @@ function randomCongrats(){
 }
 
 function countDown() {
-  var i =5;
+  var i =3;
   var myInterval = setInterval(function() {
     $('#timerSeconds').html(i);
     if(i === 0) {
@@ -78,10 +83,12 @@ function postQuestion(n){
 }
 
 function startTrivia() {
-  postQuestion(currentQuestionIndex)
+  postQuestion(currentQuestionIndex);
 }
 
-randomCongrats();
+function checkUserAnswer() {
+
+}
 
 $("#startButton").on("click", function() {
   $("#buttonRow").hide();
@@ -92,7 +99,7 @@ $("#startButton").on("click", function() {
 })
 
 function nextQuestion() {
-
+  userProgress
 }
 
 // function pickingAnswer() {
@@ -100,6 +107,7 @@ function nextQuestion() {
 // }
 
 $(".pickAnswer").on("click", function() {
+  var userAnswer =
   currentQuestionIndex++
   console.log(currentQuestionIndex);
 })
