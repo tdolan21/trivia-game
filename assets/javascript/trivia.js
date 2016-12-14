@@ -67,23 +67,30 @@ var questions = [
   {
     "q": "What did Pluto get reclassified to in 2005?",
     "c": ["A moon", "A minor planet", "A dwarf planet"],
-    "answer": 2,
+    "answer": 2
   }
-]
+];
+
+
 
 function postQuestion(n){
-  $('#question').empty();
+  
   $('.pickAnswer').remove();
   countDown();
-  $('#question').append("<div>"+ questions[0].q+"</div>");
+  $('#question').append("<div>"+ questions[n].q+"</div>");
   for(var i = 0; i < questions[n].c.length;i++) {
-    $('#choices').append("<div class='pickAnswer'>" + questions[0].c[i]+"</div>");
+    $('#choices').append("<div class='pickAnswer' indexNum='" + i + "'>" + questions[n].c[i]+"</div>");
   }
 
   // need to put this after pickAnswer is put into the DOM
   $(".pickAnswer").on("click", function() {
     currentQuestionIndex++;
-    console.log(currentQuestionIndex)
+    console.log(currentQuestionIndex);
+  
+    
+    // if()
+    
+    postQuestion(currentQuestionIndex);
   })
 }
 
@@ -108,7 +115,7 @@ $("#startButton").on("click", function() {
 })
 
 function nextQuestion() {
-  userProgress
+  
 }
 
 // function pickingAnswer() {
