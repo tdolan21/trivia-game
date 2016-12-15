@@ -20,8 +20,7 @@ $(document).ready(function(){
    var correctCounter = 0,
    incorrectCounter = 0,
    unansweredCounter = 0,
-   currentQuestionIndex = 0,
-   userProgress= 0;
+   currentQuestionIndex = 0;
 
 
 var congratsMessages = ['Great going cadet', 'On the money astrophysicist', "To Infinity!"];
@@ -175,6 +174,14 @@ function postQuestion(n){
 
 function startTrivia() {
   postQuestion(currentQuestionIndex);
+
+}
+
+function resetGame() {
+  var correctCounter = 0,
+  incorrectCounter = 0,
+  unansweredCounter = 0,
+  currentQuestionIndex = 0;
 
 }
 
