@@ -9,7 +9,8 @@
 
 $(document).ready(function(){
    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-   $("#introSection").hide()
+   $("#introSection").hide();
+   $("#messageSection").hide();
    $('#instructionModal').modal();
    $('.parallax').parallax();
    $('.tooltipped').tooltip({delay: 50});
@@ -35,7 +36,7 @@ function randomNum(x) {
 function randomCongrats(){
   var messageRoll = randomNum(congratsMessages.length);
   // return congratsMessages[messageRoll];
-  console.log(congratsMessages[messageRoll]);
+  // console.log(congratsMessages[messageRoll]);
 }
 
 function countDown() {
@@ -100,7 +101,7 @@ var questions = [
   },
   // question 6
   {
-    "q": "Scientists estimate that the universe is _________ years old.",
+    "q": "Scientists estimate that the univers is _________ years old.",
     "c": ["30.18 billion", "13.82 billion", "2 billion"],
     "answer": 1
   },
@@ -143,13 +144,6 @@ function postQuestion(n){
 
   }
 
-  function checkReset(){
-       if(currentQuestionIndex > questions.length) {
-        console.log("Game Complete");
-        resetGame();
-      }
-  }
-
   // need to put this after pickAnswer is put into the DOM
   $(".pickAnswer").on("click", function() {
     var userChoice = $(this).attr('indexnum'); // stored as a string not a number
@@ -164,19 +158,18 @@ function postQuestion(n){
       correctCounter++;
       currentQuestionIndex++
       randomCongrats();
-      checkReset();
       // insert congrats message with random roll
     //  console.log("Correct");
     } else {
       incorrectCounter++;
       currentQuestionIndex++;
-      checkReset();
       //console.log("Incorrect");
     }
 
-    // trying to find placement for game reset function
-
-
+// IF     if(currentQuestionIndex > questions.length) {
+    //   console.log("Game Complete");
+    //   resetGame();
+    // }
     // console.log(currentQuestionIndex);
 
 
@@ -185,15 +178,23 @@ function postQuestion(n){
 }
 
 function startTrivia() {
+  correctCounter = 0;
+  incorrectCounter = 0;
+  unansweredCounter = 0;
+  currentQuestionIndex = 0;
+
   postQuestion(currentQuestionIndex);
 
 }
 
 function resetGame() {
-  var correctCounter = 0,
-  incorrectCounter = 0,
-  unansweredCounter = 0,
-  currentQuestionIndex = 0;
+
+
+  // $('#messageSection').show();
+  //$('#messageSection').append("<h2>You have completed the game!</h2>");
+  //$('#messageSection').append("<div>Total Correct: " + correctCounter + "</div>");
+  //$('#messageSection').append("<div>Total Incorrect: " + incorrectCounter + "</div>");
+  //$('#messageSection').append("<div>Total Unanswered: " + unansweredCounter + "</div>");
 
   startTrivia();
 

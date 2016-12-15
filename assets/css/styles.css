@@ -10,12 +10,13 @@ Parallax and Page Styling
 
 .parallax-container {
       height: 1010px;
+      padding-bottom: 100px;
 }
 
 #header {
   color: #fff;
   font-family: 'Monoton', cursive;
-  font-size: 140px;
+  font-size: 125px;
 }
 #parall {
     background-color: rgba(0, 0, 0, 0.5);
@@ -26,23 +27,36 @@ Parallax and Page Styling
 #introCard {
   color: #fff;
   font-size: 30px;
-  margin: 50px 0;
-  margin-top: 200px;
+  margin: 30px 0;
   background-color: transparent;
 }
 
 #introSection {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 
 #instructionModal {
   background-color: rgba(0, 0, 0, 0.9);
-  color: #eeeeee;
+  color: #fff;
+  font-size: 17px;
 }
 
 #instructionModalFooter {
   background-color: rgba(0, 0, 0, 0.9);
-  color: #eeeeee;
+  color: #fff;
+}
+
+#instructionGIF {
+  margin-top: 30px;
+}
+
+#instructionConfirm {
+  color: #ffeb3b;
+  font-size: 23px;
+}
+
+#instructionConfirm:hover {
+  color:#fff;
 }
 /******************
 ******************/
@@ -74,7 +88,7 @@ Parallax and Page Styling
 
 #questionSpace {
   color: #fff;
-  margin-top: 90px;
+  margin-top: 40px;
   /*border: #fff 5px solid;
   border-radius: 6px;*/
   padding: 10px;
@@ -83,7 +97,7 @@ Parallax and Page Styling
 }
 
 #question {
-  font-size: 50px;
+  font-size: 37px;
 }
 
 /********************
