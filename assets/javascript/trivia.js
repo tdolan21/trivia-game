@@ -35,7 +35,7 @@ function randomNum(x) {
 function randomCongrats(){
   var messageRoll = randomNum(congratsMessages.length);
   // return congratsMessages[messageRoll];
-  // console.log(congratsMessages[messageRoll]);
+  console.log(congratsMessages[messageRoll]);
 }
 
 function countDown() {
@@ -100,7 +100,7 @@ var questions = [
   },
   // question 6
   {
-    "q": "Scientists estimate that the univers is _________ years old.",
+    "q": "Scientists estimate that the universe is _________ years old.",
     "c": ["30.18 billion", "13.82 billion", "2 billion"],
     "answer": 1
   },
@@ -143,6 +143,13 @@ function postQuestion(n){
 
   }
 
+  function checkReset(){
+       if(currentQuestionIndex > questions.length) {
+        console.log("Game Complete");
+        resetGame();
+      }
+  }
+
   // need to put this after pickAnswer is put into the DOM
   $(".pickAnswer").on("click", function() {
     var userChoice = $(this).attr('indexnum'); // stored as a string not a number
@@ -157,18 +164,17 @@ function postQuestion(n){
       correctCounter++;
       currentQuestionIndex++
       randomCongrats();
+      checkReset();
       // insert congrats message with random roll
     //  console.log("Correct");
     } else {
       incorrectCounter++;
       currentQuestionIndex++;
+      checkReset();
       //console.log("Incorrect");
     }
 
-// IF     if(currentQuestionIndex > questions.length) {
-    //   console.log("Game Complete");
-    //   resetGame();
-    // }
+    // trying to find placement for game reset function
 
 
     // console.log(currentQuestionIndex);
