@@ -52,8 +52,9 @@ function countDown() {
     $(".pickAnswer").on("click", function(){
       clearInterval(myInterval);
     })
-
-    if(i === 0) {
+    if (currentQuestionIndex > questions.length) {
+      resetGame();
+    } else if(i === 0) {
       unansweredCounter++;
       clearInterval(myInterval);
       currentQuestionIndex++;
@@ -139,9 +140,7 @@ function postQuestion(n){
   for(var i = 0; i < questions[n].c.length;i++) {
     $('#choices').append("<div class='pickAnswer' indexnum='" + i + "'>" + questions[n].c[i]+"</div>");
     // console.log(questions[n].answer);
-  if(currentQuestionIndex === questions.length) {
 
-  }
   }
 
   // need to put this after pickAnswer is put into the DOM
@@ -150,8 +149,8 @@ function postQuestion(n){
     userChoice = parseInt(userChoice);
       // console.log(userChoice);
       // currentQuestionIndex++;
-      console.log(currentQuestionIndex);
-      console.log()
+        // console.log(currentQuestionIndex);
+
       // checks if user is correct and will tally accordingly
       // need to create a conditional that goes with the timer to add to unanswered
     if(userChoice === questions[currentQuestionIndex].answer) {
@@ -159,12 +158,19 @@ function postQuestion(n){
       currentQuestionIndex++
       randomCongrats();
       // insert congrats message with random roll
-      console.log("Correct");
+    //  console.log("Correct");
     } else {
       incorrectCounter++;
       currentQuestionIndex++;
-      console.log("Incorrect");
+      //console.log("Incorrect");
     }
+
+// IF     if(currentQuestionIndex > questions.length) {
+    //   console.log("Game Complete");
+    //   resetGame();
+    // }
+
+
     // console.log(currentQuestionIndex);
 
 
@@ -183,12 +189,15 @@ function resetGame() {
   unansweredCounter = 0,
   currentQuestionIndex = 0;
 
+  startTrivia();
+
 }
+
 
 
 $("#startButton").on("click", function() {
   $("#buttonRow").hide();
-  $("#introCard").hide();
+  $("#introCard").remove();
   $("#timer").append("<span id='timerMinutes'>00</span>:<span id='timerSeconds'>00</span>");
   $("#questionSpace").show();
 

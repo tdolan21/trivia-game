@@ -51,6 +51,10 @@ Parallax and Page Styling
 /**********************
     BUTTON STYLING
 ***********************/
+#buttonRow {
+  margin-top: 130px;
+}
+
 .btn-large {
   border-radius: 6px;
   border: #fff 4px solid;
@@ -70,7 +74,7 @@ Parallax and Page Styling
 
 #questionSpace {
   color: #fff;
-  margin-top: 200px;
+  margin-top: 90px;
   /*border: #fff 5px solid;
   border-radius: 6px;*/
   padding: 10px;
@@ -98,7 +102,20 @@ Parallax and Page Styling
   font-size: 23px;
 }
 
-.pickAnswser {
+.pickAnswer {
   border: solid 5px #fff;
+
+}
+
+.pickAnswer,
+.pickAnswer:hover {
   display: block;
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.pickAnswer:hover {
+  border: solid 5px #f1c40f;
+  cursor: pointer;
 }
