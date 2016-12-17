@@ -37,19 +37,19 @@ $(document).ready(function() {
         var i = 30;
         var myInterval = setInterval(function() {
 
-            if(i < 10) {
-              $('#timerSeconds').html("0"+i);
-              $(".pickAnswer").on("click", function() {
-                  clearInterval(myInterval);
-            })
-          }else {
-              $('#timerSeconds').html(i);
-            $(".pickAnswer").on("click", function() {
-                clearInterval(myInterval);
-              })
+            if (i < 10) {
+                $('#timerSeconds').html("0" + i);
+                $(".pickAnswer").on("click", function() {
+                    clearInterval(myInterval);
+                })
+            } else {
+                $('#timerSeconds').html(i);
+                $(".pickAnswer").on("click", function() {
+                    clearInterval(myInterval);
+                })
             }
 
-              if (i === 0) {
+            if (i === 0) {
                 unansweredCounter++;
                 clearInterval(myInterval);
                 currentQuestionIndex++;
@@ -163,14 +163,14 @@ $(document).ready(function() {
             }
             postQuestion(currentQuestionIndex);
         })
-      }
+    }
 
     function startTrivia() {
-      $('#messageSection').hide();
-      $('#gameMessage').empty()
-      $('#questionContainer').show();
-      $('#choices').show();
-      $("#timer").show();
+        $('#messageSection').hide();
+        $('#gameMessage').empty()
+        $('#questionContainer').show();
+        $('#choices').show();
+        $("#timer").show();
         correctCounter = 0;
         incorrectCounter = 0;
         unansweredCounter = 0;
@@ -191,7 +191,7 @@ $(document).ready(function() {
         $('#gameMessage').append("<h4>Total Incorrect: " + incorrectCounter + "</h4>");
         $('#gameMessage').append("<h4>Total Unanswered: " + unansweredCounter + "</h4>");
 
-        setTimeout(startTrivia, 1000*10);
+        setTimeout(startTrivia, 1000 * 10);
 
     }
 
