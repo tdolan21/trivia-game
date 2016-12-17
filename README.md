@@ -16,3 +16,9 @@ The framework used for the project was Google's MaterializeCSS, which has been m
 The code isn't ideal. Would like to rewrite and store function within larger objects.  
 
 Many functions require hiding and deleting elements, would like to create a more efficient flow for the program.
+
+## To Do's  
+
+Would like to add more animations and do some visual tweaks to the program.
+
+Need to make design responsive.

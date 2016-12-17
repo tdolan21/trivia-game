@@ -2,6 +2,21 @@ body {
   font-family: 'Space Mono', monospace;
   /*padding-bottom: 70px;*/
   font-weight: 400;
+  /*FOOTER RULES*/
+  display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+   flex: 1 0 auto;
+ }
+
+footer.page-footer {
+  margin-top: 0;
+}
+
+#gitIcon {
+  line-height: 55px ;
 }
 
 /*****************
