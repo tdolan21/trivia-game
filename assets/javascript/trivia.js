@@ -179,6 +179,11 @@ $(document).ready(function() {
 
 
     function startTrivia() {
+      $('#messageSection').hide();
+      $('#gameMessage').empty()
+      $('#questionContainer').show();
+      $('#choices').show();
+      $("#timer").show();
         correctCounter = 0;
         incorrectCounter = 0;
         unansweredCounter = 0;
@@ -189,15 +194,17 @@ $(document).ready(function() {
     }
 
     function resetGame() {
+        $('#messageSection').show();
+        $('#questionContainer').hide();
+        $('#choices').hide();
+        $('#timer').hide()
 
+        $('#gameMessage').append("<h2>You have completed the game!</h2>");
+        $('#gameMessage').append("<h4>Total Correct: " + correctCounter + "</h4>");
+        $('#gameMessage').append("<h4>Total Incorrect: " + incorrectCounter + "</h4>");
+        $('#gameMessage').append("<h4>Total Unanswered: " + unansweredCounter + "</h4>");
 
-        // $('#messageSection').show();
-        //$('#messageSection').append("<h2>You have completed the game!</h2>");
-        //$('#messageSection').append("<div>Total Correct: " + correctCounter + "</div>");
-        //$('#messageSection').append("<div>Total Incorrect: " + incorrectCounter + "</div>");
-        //$('#messageSection').append("<div>Total Unanswered: " + unansweredCounter + "</div>");
-
-        startTrivia();
+        setTimeout(startTrivia, 1000*10);
 
     }
 
