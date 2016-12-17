@@ -1,7 +1,7 @@
 # Trivia Game
 
 A trivia-game for Rutgers Coding Bootcamp  
-[LIVE LINK](chinjon.github.io/trivia-game)
+[LIVE LINK](https://chinjon.github.io/trivia-game)
 
 ## Functionality  
 
