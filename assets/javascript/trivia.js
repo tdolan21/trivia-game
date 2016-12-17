@@ -47,14 +47,8 @@ $(document).ready(function() {
             $(".pickAnswer").on("click", function() {
                 clearInterval(myInterval);
               })
-
-
             }
 
-
-            // if (currentQuestionIndex > questions.length) {
-            //     resetGame();
-            // } else
               if (i === 0) {
                 unansweredCounter++;
                 clearInterval(myInterval);
@@ -63,9 +57,7 @@ $(document).ready(function() {
                     times: 25
                 }, 1000 * 5);
                 i = 30;
-                postQuestion(currentQuestionIndex); // need to fix loop will skip two questions if unanswered
-
-                // will keep running if no answer for all questions
+                postQuestion(currentQuestionIndex);
             } else {
                 i--;
             }
@@ -159,7 +151,6 @@ $(document).ready(function() {
             userChoice = parseInt(userChoice);
 
             // checks if user is correct and will tally accordingly
-            // need to create a conditional that goes with the timer to add to unanswered
             if (userChoice === questions[currentQuestionIndex].answer) {
                 correctCounter++;
                 currentQuestionIndex++
@@ -173,10 +164,6 @@ $(document).ready(function() {
             postQuestion(currentQuestionIndex);
         })
       }
-
-        // need to put this after pickAnswer is put into the DOM
-
-
 
     function startTrivia() {
       $('#messageSection').hide();
