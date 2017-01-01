@@ -85,7 +85,7 @@ $(document).ready(function() {
         },
         // question 4
         {
-            "q": "Which two plants in the solar system do not have moons?",
+            "q": "Which two planets in the solar system do not have moons?",
             "c": ["Saturn and Pluto", "Uranus and Mars", "Venus and Mercury"],
             "answer": 2
         },
